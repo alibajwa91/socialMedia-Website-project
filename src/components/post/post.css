@@ -1,13 +1,13 @@
 .post {
   padding: 0;
-  /* margin: 0; */
+  margin: 0;
   background: rgb(238, 174, 218);
   background: radial-gradient(
     circle,
     rgba(238, 174, 218, 1) 84%,
     rgba(148, 187, 233, 1) 100%
   );
-  margin: 24px;
+  margin: 15px 0px;
   border-radius: 15px;
   -webkit-box-shadow: 2px 7px 17px -3px rgba(0, 0, 0, 0.4);
   box-shadow: 2px 7px 17px -3px rgba(0, 0, 0, 0.4);
@@ -40,7 +40,38 @@
   justify-content: space-between;
 }
 .mainPost {
-  margin: 24px;
-  height: 481px;
-  width: 643px;
+  margin-top: 23px;
+  width: 100%;
+  max-height: 500px;
+  object-fit: contain;
+}
+.postDesc {
+  padding-left: 10%;
+  align-items: center;
+}
+.postBottom {
+  display: flex;
+  align-items: center;
+  padding: 16px 10%;
+  justify-content: space-between;
+}
+.postBottomLeft {
+  display: flex;
+  align-items: center;
+}
+/* react icon styling*/
+.reactIcon {
+  height: 28px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+/* margin to like count */
+
+.likeCount {
+  margin-left: 8px;
+  cursor: pointer;
+}
+.commentsCount {
+  cursor: pointer;
+  border-bottom: 1px dashed rgb(136, 134, 134);
 }

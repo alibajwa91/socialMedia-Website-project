@@ -6,8 +6,8 @@
   background: rgb(238, 174, 218);
   background: radial-gradient(
     circle,
-    rgba(238, 174, 218, 1) 84%,
-    rgba(148, 187, 233, 1) 100%
+    rgb(238, 146, 209) 60%,
+    rgb(124, 172, 228) 100%
   );
   position: sticky;
   top: 0;
