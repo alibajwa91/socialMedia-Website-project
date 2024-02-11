@@ -2,3 +2,61 @@
   flex: 3;
   height: calc(100vh -50px);
 }
+.rightbarWrapper {
+  padding: 20px 20px 0 0;
+}
+.birthdayIcon {
+  height: 40px;
+  width: 40px;
+}
+.birthdayContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+}
+.birthdaytext {
+  font-weight: 300;
+  margin-left: 6px;
+}
+.adImg {
+  margin: 29px 47px;
+  border-radius: 6px;
+  max-height: 51vh;
+  max-width: 20vw;
+}
+.rightbarfriendslist {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.rightbarFriend {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.rightbarProfileImgContainer {
+  margin-right: 10px;
+  position: relative;
+}
+.rightbarProfileImg {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+/* CSS to get a green Online button */
+.rightbarOnline {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: limegreen;
+  position: absolute;
+  top: -2px;
+  left: 29px;
+  border: 2px solid white;
+}
+.rightbarFriendName {
+  font-weight: 500;
+}
