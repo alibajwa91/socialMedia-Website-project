@@ -1,15 +1,15 @@
 .feed {
   flex: 5.5;
   height: calc(100vh -50px);
-  overflow-y: scroll;
-  height: 89vh;
-  scrollbar-width: 5px;
+  /* overflow-y: scroll;
+  height: 100%;
+  scrollbar-width: 5px; */
 }
 /* adding scroll bar design */
-.feed::-webkit-scrollbar {
+/* .feed::-webkit-scrollbar {
   display: none;
   width: 5px;
-}
+} */
 
 .feedWrapper {
   padding: 10px;

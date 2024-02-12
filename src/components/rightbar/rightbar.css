@@ -1,12 +1,12 @@
 .rightbar {
   flex: 3;
   height: calc(100vh -50px);
-  overflow-y: scroll;
+  /* overflow-y: scroll;
   height: 89vh;
-  scrollbar-width: 5px;
+  scrollbar-width: 5px; */
 }
 /* Optionally, style the scrollbar */
-.rightbar::-webkit-scrollbar {
+/* .rightbar::-webkit-scrollbar {
   width: 5px;
 }
 .rightbar::-webkit-scrollbar-track {
@@ -23,7 +23,7 @@
 }
 .rightbar::-webkit-scrollbar-thumb:hover {
   background-color: #464545;
-}
+} */
 .rightbarWrapper {
   padding: 20px 20px 0 0;
 }
@@ -45,4 +45,45 @@
   border-radius: 6px;
   max-height: 47vh;
   max-width: 20vw;
+}
+
+/* css for rightbar in profile page */
+.rightbarInfoItem {
+  display: flex;
+  align-items: center;
+}
+.rightbarTitle {
+  font-size: 17px;
+}
+.rightbarInfoItem {
+  margin-left: 12px;
+}
+.rightbarInfoKey {
+  font-weight: 500;
+  margin-right: 12px;
+  color: rgb(99, 95, 95);
+}
+.rightbarInfoValue {
+  font-weight: 300;
+}
+/* css to show user friends in a flex box */
+.rightbarFollowings {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-radius: 10px;
+  -webkit-box-shadow: 2px 7px 17px -3px rgba(0, 0, 0, 0.4);
+  box-shadow: 2px 7px 17px -3px rgba(0, 0, 0, 0.4);
+}
+.rightbarFollowing {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+.rightbarFollowingImg {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  object-fit: cover;
 }
