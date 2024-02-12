@@ -46,7 +46,7 @@
   object-fit: contain;
 }
 .postDesc {
-  padding-left: 10%;
+  margin-left: 30px;
   align-items: center;
 }
 .postBottom {

@@ -1,4 +1,6 @@
 import "./rightbar.css";
+import Online from "../online/Online";
+import { Users } from "../../dummyData.js";
 
 export default function Rightbar() {
   return (
@@ -15,116 +17,9 @@ export default function Rightbar() {
           <img src="./assets/ad.png" alt="" className="adImg" />
         </div>
         <h4 className="rightbarTitle">Online friends</h4>
-        <ul className="rightbarfriendslist">
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>{" "}
-          <li className="rightbarFriend">
-            {/* this container will add profile img with a online mark onit */}
-            <div className="rightbarProfileImgContainer">
-              <img
-                src="./assets/person/3.jpeg"
-                alt=""
-                className="rightbarProfileImg"
-              />
-              <span className="rightbarOnline"></span>
-            </div>
-            <span className="rightbarFriendName">Naina Fawad </span>
-          </li>
-        </ul>
+        {Users.map((u) => (
+          <Online key={u.id} user={u} />
+        ))}
       </div>
     </div>
   );

@@ -1,243 +1,65 @@
 import "./post.css";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
+import { Users } from "../../dummyData.js";
+import { useState } from "react";
 
-export default function Post() {
+export default function Post({ post }) {
+  // write a usestate function/method to make our like button functional
+  const [like, setLike] = useState(post.like);
+  const [isliked, setIsliked] = useState(false);
+
+  const likeHandler = () => {
+    setLike(isliked ? like - 1 : like + 1);
+    setIsliked(!isliked);
+  };
+
+  // console.log(post);
   return (
-    <div>
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
+    <div className="post">
+      <div className="postWrapper">
+        <div className="postTop">
+          <div className="postTopLeft">
+            <img
+              src={Users.filter((u) => u.id === post.userId)[0].profilePicture}
+              alt=""
+              className="postProfileImg"
+            />
+            {/*Users.filter((u) => u.id === post.userId)[0].profilePicture 
+            in this code we have created filter the Usersdata using the id 
+            of USers data and a callbackfunction is used to (u) => u.id === post.userId) 
+            assign itequal to the UserId of posts Data*/}
 
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">09/02/2024</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
+            <span className="postUserName">
+              {Users.filter((u) => u.id === post.userId)[0].username}
+            </span>
+            <span className="postDate">{post.date}</span>
           </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my first post: </span>
-            <img src="./assets/post/1.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">30 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">7 Comments</span>
-            </div>
+          <div className="postTopRight">
+            <MoreVertIcon />
           </div>
         </div>
-      </div>
-      {/* this is second post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">09/02/2024</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my second post: </span>
-            <img src="./assets/post/2.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">30 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">7 Comments</span>
-            </div>
-          </div>
+        <div className="postCenter">
+          <div className="postDesc"> {post?.desc}</div>
+          <img src={post.photo} alt="" className="mainPost" />
         </div>
-      </div>
-      {/* this is third post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">09/02/2024</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
+        <div className="postBottom">
+          <div className="postBottomLeft">
+            <img
+              src="./assets/like.png"
+              alt=""
+              className="reactIcon"
+              onClick={likeHandler}
+            />
+            <img
+              src="./assets/heart.png"
+              alt=""
+              className="reactIcon"
+              onClick={likeHandler}
+            />
+            <span className="likeCount">{like} likes! </span>
           </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my third post: </span>
-            <img src="./assets/post/3.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">457 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">45 Comments</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* this is fourth post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">09/02/2024</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my fourth post: </span>
-            <img src="./assets/post/4.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">588 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">42 Comments</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* this is fifth post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">09/02/2024</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my fifth post: </span>
-            <img src="./assets/post/5.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">998 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">355 Comments</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* this is sixth post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">04/05/2023</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my sixth post: </span>
-            <img src="./assets/post/6.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">124 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">12 Comments</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      {/* this is seventh post */}
-      <div className="post">
-        <div className="postWrapper">
-          <div className="postTop">
-            <div className="postTopLeft">
-              <img
-                src="./assets/person/1.jpeg"
-                alt=""
-                className="postProfileImg"
-              />
-
-              <span className="postUserName">alibajwa91</span>
-              <span className="postDate">19/01/2023</span>
-            </div>
-            <div className="postTopRight">
-              <MoreVertIcon />
-            </div>
-          </div>
-          <div className="postCenter">
-            <span className="postDesc">This is my Seventh post: </span>
-            <img src="./assets/post/7.jpeg" alt="" className="mainPost" />
-          </div>
-          <div className="postBottom">
-            <div className="postBottomLeft">
-              <img src="./assets/like.png" alt="" className="reactIcon" />
-              <img src="./assets/heart.png" alt="" className="reactIcon" />
-              <span className="likeCount">768 likes! </span>
-            </div>
-            <div className="postBottomRight">
-              <span className="commentsCount">34 Comments</span>
-            </div>
+          <div className="postBottomRight">
+            <span className="commentsCount">{post.comment} Comments</span>
           </div>
         </div>
       </div>

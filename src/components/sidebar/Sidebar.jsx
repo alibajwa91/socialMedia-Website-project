@@ -7,6 +7,8 @@ import OndemandVideoIcon from "@mui/icons-material/OndemandVideo";
 import SchoolIcon from "@mui/icons-material/School";
 import WorkIcon from "@mui/icons-material/Work";
 import EventIcon from "@mui/icons-material/Event";
+import Friend from "../friendlist/Friend";
+import { Users } from "../../dummyData.js";
 
 export default function Sidebar() {
   return (
@@ -53,49 +55,9 @@ export default function Sidebar() {
 
         <ul className="friendList">
           <h3 className="friendsListHeading">Friends List</h3>
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>{" "}
-          <li className="friend">
-            <img className="friendImg" src="./assets/person/2.jpeg" alt="" />
-            <span className="friendDesc">Allen</span>
-          </li>
-          <li className="friend">
-            <button className="showAll Friends">Show All Friends</button>
-          </li>
+          {Users.map((u) => (
+            <Friend key={u.id} currentuser={u} />
+          ))}
         </ul>
       </div>
     </div>

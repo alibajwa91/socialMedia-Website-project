@@ -12,6 +12,8 @@
   position: sticky;
   top: 0;
   justify-content: space-between;
+  /* this will makethis component on top of all other components on page  */
+  z-index: 999;
 }
 .topbarLeft {
   flex: 3;
