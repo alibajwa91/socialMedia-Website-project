@@ -1,6 +1,7 @@
 import "./rightbar.css";
 import Online from "../online/Online";
 import { Users } from "../../dummyData.js";
+import UserFriend from "../userFriend/UserFriend.jsx";
 
 export default function Rightbar({ profile }) {
   const PageAd = () => {
@@ -57,55 +58,11 @@ export default function Rightbar({ profile }) {
             </span>
           </div>
           <h4 className="rightbarTitle"> User Friends</h4>
+          {/* map function for user friends at right bar at profile page */}
           <div className="rightbarFollowings">
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
-            <div className="rightbarFollowing">
-              <img
-                src="/assets/person/2.jpeg"
-                alt=""
-                className="rightbarFollowingImg"
-              />
-              <span className="rightbarFollowingName">Sharukh</span>
-            </div>
+            {Users.map((u) => (
+              <UserFriend key={u.id} follower={u} />
+            ))}
           </div>
         </div>{" "}
         {/* to show ad */}

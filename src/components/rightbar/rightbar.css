@@ -67,7 +67,7 @@
   font-weight: 300;
 }
 /* css to show user friends in a flex box */
-.rightbarFollowings {
+/* .rightbarFollowings {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -86,4 +86,4 @@
   width: 100px;
   border-radius: 5px;
   object-fit: cover;
-}
+} */
