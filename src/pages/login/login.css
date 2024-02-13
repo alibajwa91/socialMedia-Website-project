@@ -1,0 +1,117 @@
+.loginContainer {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: white;
+  align-items: center;
+  justify-content: center;
+}
+.loginWrapper {
+  height: 70%;
+  width: 70%;
+  display: flex;
+  background-color: white;
+  border-radius: 23px;
+}
+.loginleft,
+.loginRight {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+}
+.loginleft {
+  align-items: center;
+}
+.loginLogo {
+  font-size: 40px;
+  margin-bottom: 23px;
+  font-weight: bolder;
+}
+.LoginDesc {
+  font-size: 20px;
+  color: rgb(95, 95, 95);
+}
+
+/* style for post up logo */
+
+/* Tutorial on https://fossheim.io/writing/posts/css-text-gradient. */
+
+.loginLogo {
+  cursor: pointer;
+  /* Create the gradient. */
+  background-image: linear-gradient(
+    45deg,
+    rgb(241, 97, 196) 60%,
+    rgb(87, 150, 221) 100%
+  );
+
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
+}
+
+h1 {
+  font-family: "Archivo Black", sans-serif;
+  font-weight: normal;
+  font-size: 6em;
+  text-align: center;
+  margin-bottom: 0;
+  margin-bottom: -0.25em;
+}
+
+/* loginbox styling */
+.loginBox {
+  height: 300px;
+  padding: 20px;
+  background: rgb(238, 174, 218);
+  background: radial-gradient(
+    circle,
+    rgb(238, 146, 209) 60%,
+    rgb(124, 172, 228) 100%
+  );
+  border-radius: 9px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.loginEmail,
+.loginPassword {
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid gray;
+  font-size: 17px;
+  padding-left: 10px;
+}
+.loginEmail,
+.loginPassword:focus {
+  outline: none;
+}
+
+.loginBtn {
+  height: 50px;
+  border-radius: 4px;
+  font-size: 17px;
+  background-color: rgb(104, 104, 253);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 500;
+}
+.RegisterBtn {
+  height: 50px;
+  width: 50%;
+  align-self: center;
+  border-radius: 4px;
+  font-size: 17px;
+  background-color: rgb(3, 202, 20);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  font-weight: 500;
+}
+.forgetPassword {
+  color: rgb(63, 63, 63);
+  cursor: pointer;
+}
