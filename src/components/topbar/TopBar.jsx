@@ -3,13 +3,17 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
+import Home from "../../pages/home/home";
+import { Link } from "react-router-dom";
 
 export default function TopBar() {
   return (
     <div className="topbarContainer">
       <div className="topbarLeft">
         {" "}
-        <span className="logo">PostUp</span>
+        <Link to="/" className="logo">
+          PostUp
+        </Link>
       </div>
       <div className="topbarCenter">
         <div className="searchbar">
@@ -19,7 +23,9 @@ export default function TopBar() {
       </div>
       <div className="topbarRight">
         <div className="topbarLinks">
-          <span className="topbarLink">Homepage</span>
+          <Link to="/homepage" className="topbarLink">
+            Homepage
+          </Link>
           <span className="topbarLink">Timeline</span>
         </div>
         <div className="topbarIcons">
@@ -36,7 +42,9 @@ export default function TopBar() {
             <span className="topbarIconBadge">3</span>
           </div>
         </div>
-        <img src="./assets/person/1.jpg" alt="" className="topbarImg" />
+        <Link to="/profilepage">
+          <img src="./assets/person/1.jpg" alt="" className="topbarImg" />
+        </Link>
       </div>
     </div>
   );
