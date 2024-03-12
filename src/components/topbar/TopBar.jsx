@@ -3,7 +3,6 @@ import SearchIcon from "@mui/icons-material/Search";
 import PersonIcon from "@mui/icons-material/Person";
 import MessageIcon from "@mui/icons-material/Message";
 import NotificationsIcon from "@mui/icons-material/Notifications";
-import Home from "../../pages/home/home";
 import { Link } from "react-router-dom";
 
 export default function TopBar() {
