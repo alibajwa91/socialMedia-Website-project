@@ -5,6 +5,7 @@
   height: 89vh;
   scrollbar-width: 5px; */
 }
+
 /* Optionally, style the scrollbar */
 /* .rightbar::-webkit-scrollbar {
   width: 5px;
@@ -27,19 +28,23 @@
 .rightbarWrapper {
   padding: 20px 20px 0 0;
 }
+
 .birthdayIcon {
   height: 40px;
   width: 40px;
 }
+
 .birthdayContainer {
   display: flex;
   align-items: center;
   margin-top: 12px;
 }
+
 .birthdaytext {
   font-weight: 300;
   margin-left: 6px;
 }
+
 .adImg {
   margin: 33px 29px;
   border-radius: 6px;
@@ -52,20 +57,25 @@
   display: flex;
   align-items: center;
 }
+
 .rightbarTitle {
   font-size: 17px;
 }
+
 .rightbarInfoItem {
   margin-left: 12px;
 }
+
 .rightbarInfoKey {
   font-weight: 500;
   margin-right: 12px;
   color: rgb(99, 95, 95);
 }
+
 .rightbarInfoValue {
   font-weight: 300;
 }
+
 /* css to show user friends in a flex box */
 /* .rightbarFollowings {
   display: flex;
@@ -87,3 +97,20 @@
   border-radius: 5px;
   object-fit: cover;
 } */
+@media (max-width: 660px) {
+  .onlineMobileView {
+    display: none;
+  }
+
+  .sidebarHam {
+    position: fixed;
+  }
+
+  .onlineMobileView.active {
+    display: block;
+  }
+
+  .onlineMobileView.nonActive {
+    display: none;
+  }
+}

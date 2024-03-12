@@ -1,4 +1,4 @@
-.sidebar {
+.sidebarWrapper {
   flex: 3;
   height: calc(100vh -50px);
   overflow-y: scroll;
@@ -10,40 +10,78 @@
 .sidebar::-webkit-scrollbar {
   width: 5px;
 }
+
 .sidebar::-webkit-scrollbar-track {
   background-color: #f1f1f1;
 }
+
 .sidebar::-webkit-scrollbar-thumb {
   background: rgb(238, 174, 218);
-  background: radial-gradient(
-    circle,
-    rgb(238, 146, 209) 60%,
-    rgb(124, 172, 228) 100%
-  );
+  background: radial-gradient(circle,
+      rgb(238, 146, 209) 60%,
+      rgb(124, 172, 228) 100%);
   border-radius: 4px;
 }
+
 .sidebar::-webkit-scrollbar-thumb:hover {
   background-color: #464545;
 }
+
 .sidebarList {
   padding: 0;
   margin: 0;
   list-style: none;
 }
+
 .sidebarListItem {
   display: flex;
   align-items: center;
   margin-bottom: 13px;
 }
+
 .sidebarListItemIcon {
   cursor: pointer;
 }
+
 .sidebarListItemText {
   margin-left: 17px;
   cursor: pointer;
 }
+
 .friendList {
   padding: 0;
   margin: 0;
   list-style: none;
+}
+
+.menuIcon {
+  display: none;
+  background-color: #f1f1f1;
+  border-radius: 12px;
+}
+
+@media (max-width: 660px) {
+  .sidebarBottom.active {
+    display: block;
+    position: fixed;
+    z-index: 999 !important;
+    background-color: #f1f1f1;
+  }
+
+  .sidebarWrapper {
+    z-index: 999;
+  }
+
+  .sidebarBottom.nonActive {
+    display: none;
+  }
+
+  .menuIcon {
+    display: block;
+    z-index: 1000;
+  }
+
+  /* .sidebarWrapper {
+    display: none;
+  } */
 }

@@ -14,12 +14,14 @@
   margin-right: 10px;
   position: relative;
 }
+
 .rightbarProfileImg {
   height: 40px;
   width: 40px;
   border-radius: 50%;
   object-fit: cover;
 }
+
 /* CSS to get a green Online button */
 .rightbarOnline {
   width: 12px;
@@ -31,6 +33,7 @@
   left: 29px;
   border: 2px solid white;
 }
+
 .rightbarFriendName {
   font-weight: 500;
 }

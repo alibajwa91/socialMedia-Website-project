@@ -15,37 +15,39 @@ export default function TopBar() {
           PostUp
         </Link>
       </div>
-      <div className="topbarCenter">
-        <div className="searchbar">
-          <SearchIcon />
-          <input type="text" className="searchInput" />
+      <div className="topbarLeftMobView">
+        <div className="topbarCenter">
+          <div className="searchbar">
+            <SearchIcon />
+            <input type="text" className="searchInput" />
+          </div>
+        </div>
+        <div className="topbarRight">
+          <div className="topbarLinks">
+            <Link to="/homepage" className="topbarLink">
+              Homepage
+            </Link>
+            <span className="topbarLink">Timeline</span>
+          </div>
+          <div className="topbarIcons">
+            <div className="topbarIconItem">
+              <PersonIcon />
+              <span className="topbarIconBadge">1</span>
+            </div>
+            <div className="topbarIconItem">
+              <MessageIcon />
+              <span className="topbarIconBadge">2</span>
+            </div>
+            <div className="topbarIconItem">
+              <NotificationsIcon />
+              <span className="topbarIconBadge">3</span>
+            </div>
+          </div>
         </div>
       </div>
-      <div className="topbarRight">
-        <div className="topbarLinks">
-          <Link to="/homepage" className="topbarLink">
-            Homepage
-          </Link>
-          <span className="topbarLink">Timeline</span>
-        </div>
-        <div className="topbarIcons">
-          <div className="topbarIconItem">
-            <PersonIcon />
-            <span className="topbarIconBadge">1</span>
-          </div>
-          <div className="topbarIconItem">
-            <MessageIcon />
-            <span className="topbarIconBadge">2</span>
-          </div>
-          <div className="topbarIconItem">
-            <NotificationsIcon />
-            <span className="topbarIconBadge">3</span>
-          </div>
-        </div>
-        <Link to="/profilepage">
-          <img src="./assets/person/1.jpg" alt="" className="topbarImg" />
-        </Link>
-      </div>
+      <Link to="/profilepage">
+        <img src="./assets/person/1.jpg" alt="" className="topbarImg" />
+      </Link>
     </div>
   );
 }

@@ -2,8 +2,15 @@ import "./rightbar.css";
 import Online from "../online/Online";
 import { Users } from "../../dummyData.js";
 import UserFriend from "../userFriend/UserFriend.jsx";
+import React, { useState } from "react";
 
 export default function Rightbar({ profile }) {
+  // code to open and close online friends div
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleOnlineFriends = () => {
+    setIsOpen(!isOpen);
+  };
   const PageAd = () => {
     return (
       <div className="adcontainer">
@@ -24,13 +31,19 @@ export default function Rightbar({ profile }) {
         </div>
         {/* To show AD */}
         <PageAd />
-        <h4 className="rightbarTitle">Online friends</h4>
-        {Users.map((u) => (
-          <Online key={u.id} user={u} />
-        ))}
+        {/* used togglOnilne from above function */}
+        <h4 className="rightbarTitle" onClick={toggleOnlineFriends}>
+          Online friends
+        </h4>
+        <div className={`onlineMobileView ${isOpen ? "active" : "nonActive"} `}>
+          {Users.map((u) => (
+            <Online key={u.id} user={u} />
+          ))}
+        </div>
       </div>
     );
   };
+
   const RightbarProfile = () => {
     return (
       <div>

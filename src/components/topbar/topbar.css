@@ -1,23 +1,24 @@
-.topbarContainer {
+.topbarContainer,
+.topbarLeftMobView {
   height: 50px;
   width: 100%;
   align-items: center;
   display: flex;
   background: rgb(238, 174, 218);
-  background: radial-gradient(
-    circle,
-    rgb(238, 146, 209) 60%,
-    rgb(124, 172, 228) 100%
-  );
+  background: radial-gradient(circle,
+      rgb(238, 146, 209) 60%,
+      rgb(124, 172, 228) 100%);
   position: sticky;
   top: 0;
   justify-content: space-between;
   /* this will makethis component on top of all other components on page  */
   z-index: 999;
 }
+
 .topbarLeft {
   flex: 3;
 }
+
 .logo {
   font-size: 1.5em;
   font-family: Garamond, serif;
@@ -26,9 +27,13 @@
   cursor: pointer;
   margin-left: 2%;
 }
+
 .topbarCenter {
   flex: 5;
+  margin-left: 26px;
+  margin-right: 50px;
 }
+
 .searchbar {
   background-color: white;
   height: 30px;
@@ -37,11 +42,13 @@
   display: flex;
   align-items: center;
 }
+
 .searchInput {
   border: none;
   height: 20px;
   width: 70%;
 }
+
 .searchInput:focus {
   outline: none;
 }
@@ -51,18 +58,22 @@
   display: flex;
   margin-right: 2%;
 }
+
 .topbarLink {
   margin-right: 10px;
   font-size: 17px;
   cursor: pointer;
   color: white;
 }
+
 .topbarLinks {
   margin-left: 40px;
 }
+
 .topbarIcons {
   display: flex;
 }
+
 .topbarIconBadge {
   width: 15px;
   height: 15px;
@@ -77,17 +88,48 @@
   justify-content: center;
   font-size: 12px;
 }
+
 .topbarImg {
   margin-left: 2vw;
+  padding-right: 12px;
   height: 30px;
   width: 30px;
   border-radius: 50%;
   cursor: pointer;
   object-fit: cover;
 }
+
 .topbarIconItem {
   margin-right: 15px;
   cursor: pointer;
   position: relative;
   color: white;
+}
+
+@media (max-width: 660px) {
+  .topbarRight {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .topbarLinks {
+    margin-top: 12px;
+  }
+
+  .topbarIcons {
+    margin-top: 12px;
+  }
+
+  .topbarContainer {
+    height: 140px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .topbarLeftMobView {
+    display: flex;
+    flex-direction: column;
+  }
 }
